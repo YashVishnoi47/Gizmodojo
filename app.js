@@ -3,11 +3,11 @@ const mongoose = require("mongoose");
 const path = require("path");
 const express = require("express");
 const flash = require("connect-flash");
-const connectDB = require("./src/config/db");
+const connectDB = require("./config/db");
 const dbgr = require("debug")("app:app");
 const app = express();
 
-connectDB();
+connectDB(); // Database Connection from config/db
 
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));

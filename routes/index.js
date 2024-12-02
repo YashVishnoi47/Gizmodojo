@@ -3,7 +3,7 @@ const app = express();
 const router = express.Router();
 
 router.get('/',function(req,res){  
-    res.send("Hello World")
+    res.render('index');
 });
 
 module.exports = router;
